@@ -1,0 +1,33 @@
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__state {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 1px;
+      height: 1rem;
+      position: relative;
+      padding-right: 1rem;
+      margin-right: 1.5rem;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background: lightgray;
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
