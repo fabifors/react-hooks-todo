@@ -5,6 +5,7 @@ function App() {
 
   return (
     <div className="todos">
+      <h1 className="main-title">Todos</h1>
       <Todos/>
     </div>
   );

@@ -1,54 +1,10 @@
 import React, { useReducer, useState } from 'react';
 import TodoItem from '../components/TodoItem.js'
 
+import reducer from '../store/TodosReducer.js';
+
 const initialState = {
   todos: []
-}
-
-function createTodo (content) {
-  return {
-    id: Date.now(),
-    content: content,
-    done: false,
-    edit: false
-  }
-}
-
-function reducer (state, action) {
-  let index;
-  const { type, payload } = action;
-  switch (type) {
-    case 'add':
-      let todo = createTodo(payload.content);
-      state.todos.push(todo);
-      return { todos: [ ...state.todos ] };
-
-    case 'remove':
-      let newState = state.todos.filter(todo => todo.id !== payload.id)
-      return { todos: [ ...newState ] };
-
-    case 'edit':
-      index = state.todos.findIndex(todo => todo.id === payload.id)
-      state.todos[index].content = payload.content
-      return { todos: [ ...state.todos ] };
-
-    case 'toggle-done':
-      index = state.todos.findIndex(todo => todo.id === payload.id);
-      if (state.todos[index].done) {
-        state.todos[index].done = false;
-      } else {
-        state.todos[index].done = true;
-      }
-      return {todos: [ ...state.todos ]};
-
-    case 'toggle-edit':
-      console.log(payload.id);
-      index = state.todos.findIndex((todo) => todo.id === payload.id);
-      state.todos[index].edit = !state.todos[index].edit;
-      return { todos: [ ...state.todos ]};
-
-    default: throw new Error();
-  }
 }
 
 function Todos () {

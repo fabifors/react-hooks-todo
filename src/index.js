@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import all general scss files
-import './assets/scss/general.scss';
-import './assets/scss/normalize.scss';
+// Import all styles via styles.scss
+import './assets/scss/styles.scss';
 
 // Import the main application view
 import App from './App';

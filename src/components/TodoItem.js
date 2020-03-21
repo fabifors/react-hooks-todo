@@ -1,5 +1,4 @@
 import React from 'react'
-import '../assets/scss/components/TodoItem.scss';
 
 export const TodoItem = (props) => {
   const { todoItem, handleRemove, handleToggleEdit, handleEdit, handleToggleDone } = props;
@@ -28,11 +27,8 @@ export const TodoItem = (props) => {
         className="todo-item__state"
         onClick={() => handleToggleDone(id)}
         >
-        <input
-          type="checkbox"
-          value={done}
-          />
-      </div>
+          {done ? '✔' : ''}
+        </div>
       <div className="todo-item__content">
         { edit ? renderInput : renderContent }
       </div>
