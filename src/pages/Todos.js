@@ -1,12 +1,12 @@
 import React, { useReducer } from "react";
 
-import reducer from "../store/TodosReducer.js";
+import TodosReducer from "../store/Todos/TodosReducer.js";
 import AddTodoItem from "../components/AddTodoItem.js";
 import TodosList from "../components/TodosList.js";
 
 function Todos() {
   const initialState = { todos: [] };
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(TodosReducer, initialState);
   const { todos } = state;
   console.log(state);
 

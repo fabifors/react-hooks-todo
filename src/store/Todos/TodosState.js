@@ -6,9 +6,16 @@ const INITIAL_STATE = {
 
 const [state, setState] = useState(INITIAL_STATE);
 
-const init = () => {
-  const localStore = localStorage.getItem("todos");
-  if (localStore) {
-    setState({ ...localStore });
+const methods = {
+  init: () => {
+    const localStore = localStorage.getItem("todos");
+    if (localStore) {
+      setState({ ...localStore });
+    }
   }
+};
+
+export default {
+  state,
+  methods
 };
