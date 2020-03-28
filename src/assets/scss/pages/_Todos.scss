@@ -1,24 +1,7 @@
+.todos {
+  padding: $space-1;
 
-
-.input-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  width: 100%;
-
-  &__icon {
-    position: absolute;
-    flex-basis: 2rem;
-  }
-
-  &__input {
-    padding: $space-1;
-  }
-
-  &__action {
-    padding: $space-1;
-    background: hsl(207, 62%, 32%);
+  .page-title {
+    color: $primary-color-dark;
   }
 }

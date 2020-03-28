@@ -3,7 +3,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: $space-1;
+  background: $primary-color-lightest;
+  border: 1px $primary-color-light solid;
+  padding: $space-1;
+  margin: $space-1 0;
 
   &__state {
     display: flex;
@@ -21,6 +24,8 @@
     border: 2px solid $primary-color;
     font-size: 0.5rem;
     color: $white;
+
+    margin-right: 0.5rem;
   }
 
   &--done {
@@ -30,5 +35,10 @@
   }
 
   &__content {
+  }
+
+  &__actions {
+    margin-left: auto;
+    color: $white;
   }
 }

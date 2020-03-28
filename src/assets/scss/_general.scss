@@ -1,10 +1,13 @@
 * {
-  font-family: 'Proxima Soft';
+  font-family: "Proxima Soft";
   margin: 0;
   padding: 0;
   color: $black;
+  box-sizing: border-box;
 }
 
-.main-title {
-  font-size: 3rem;
+.page-title {
+  font-size: 2rem;
+  margin: 0;
+  padding: $space-2 0 $space-1;
 }

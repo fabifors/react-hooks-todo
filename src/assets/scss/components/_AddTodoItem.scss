@@ -1,0 +1,34 @@
+.input-group {
+  width: 100%;
+  padding: $space-1 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0.35rem;
+    flex-basis: 2rem;
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: $space-1 $space-1 $space-1 2rem;
+    border: 1px solid $primary-color;
+  }
+
+  &__action {
+    padding: $space-1;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white;
+  }
+}

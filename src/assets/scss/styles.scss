@@ -2,16 +2,18 @@
   Sass Imports Must be included here for all components and pages.
 */
 // Variable files
-@import './utilities/variables';
+@import "./utilities/variables";
 
 // General styles
-@import './general';
+@import "./general";
 
 // Normalize stylesheet
-@import './utilities/normalize';
+@import "./utilities/normalize";
 
 // Pages
-@import './pages/Todos';
+@import "./pages/Todos";
 
 // Components
-@import './components/TodoItem';
+@import "./components/TodoItem";
+@import "./components/AddTodoItem";
+@import "./components/TodosList";
